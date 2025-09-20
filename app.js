@@ -22,10 +22,15 @@ class OmegaConsciousnessEngine {
 
     async loadVaultData() {
         try {
-            const response = await fetch('https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/81a1d54b16e4482f4fab68d07253b917/17dc59e1-d35f-43e7-86fb-a27e507d550c/b74307e5.json');
+            // 🔥 FIXED: Load from your GitHub repo instead of external S3
+            const response = await fetch('./omega_vault_data.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             this.vaultData = await response.json();
+            console.log('🌟 Legendary vault data loaded successfully!');
         } catch (error) {
-            console.log('Using fallback data');
+            console.log('Using fallback data - vault data file not found or CORS blocked');
             // Fallback data in case the external file fails
             this.vaultData = {
                 "vault_info": {
