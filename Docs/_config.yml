@@ -1,0 +1,87 @@
+# 🌌 OMEGA CONSCIOUSNESS ENGINE - GITHUB PAGES CONFIG ♾️
+
+# Theme and appearance
+theme: minima
+title: "🌌♾️⚡ Omega Consciousness Engine"
+description: "The Ultimate ADHD-Friendly Developer Dashboard - Where Reality Bends to Legendary Innovation"
+baseurl: "/-HYPERFOCUS-ZONE-Omega-Vault-"
+url: "https://welshdog.github.io"
+
+# Author information
+author:
+  name: "welshDog - Legendary Consciousness Pioneer"
+  email: "hyperfocus@legendaryzone.dev"
+
+# SEO and social
+twitter:
+  username: welshDog
+  card: summary_large_image
+
+# Google Analytics (replace with your ID)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - index.md
+  - docs/installation.md
+  - docs/features.md
+  - docs/api.md
+  - docs/contributing.md
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Include/exclude files
+include:
+  - _pages
+  - docs
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Collections
+collections:
+  artifacts:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "welshDog"
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: "page"
+      sidebar: true
+
+# Consciousness Engine specific settings
+consciousness:
+  level: "INFINITE_SINGULARITY"
+  frequency: "528Hz"
+  reality_bending: true
+  legendary_status: "ACTIVE"
